@@ -1,0 +1,536 @@
+/* Font Styles */
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+/* Variables */
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(184, 91%, 17%);
+  --clr-primary-2: hsl(185, 84%, 25%);
+  --clr-primary-3: hsl(185, 81%, 29%);
+  --clr-primary-4: hsl(184, 77%, 34%);
+  /* primary/main color */
+  --clr-primary-5: hsl(185, 62%, 45%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(185, 57%, 50%);
+  --clr-primary-7: hsl(184, 65%, 59%);
+  --clr-primary-8: hsl(184, 80%, 74%);
+  --clr-primary-9: hsl(185, 94%, 87%);
+  --clr-primary-10: hsl(186, 100%, 94%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --ff-primary: "Lato", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-primary);
+  background: var(--clr-white);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+img:not(.nav-logo) {
+  width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+.accent {
+  color: var(--clr-primary-5);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+.btn {
+  padding: 8px 14px;
+  background-color: var(--clr-primary-5);
+  border: 2px solid var(--clr-primary-5);
+  color: var(--clr-white);
+  text-transform: uppercase;
+  font-family: var(--ff-primary);
+  letter-spacing: var(--spacing);
+  transition: var(--transition);
+  box-shadow: var(--light-shadow);
+  cursor: pointer;
+}
+.btn:hover {
+  background: var(--clr-primary-8);
+  color: var(--clr-grey-3);
+  border: 2px solid var(--clr-primary-8);
+}
+/* Nav Bar*/
+nav {
+  width: 100%;
+  height: 3.9rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem 2rem;
+  background-color: var(--clr-white);
+  box-shadow: var(--dark-shadow);
+  z-index: 2;
+}
+.nav-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--clr-primary-5);
+}
+.header-title {
+  color: var(--clr-white);
+  text-align: center;
+  text-transform: uppercase;
+  /* padding: 0 3rem; */
+}
+.header-p {
+  color: var(--clr-white);
+  text-align: center;
+  letter-spacing: var(--spacing);
+  max-width: 50rem;
+  padding: 0 3rem;
+}
+.explore-btn {
+  text-transform: uppercase;
+  font-family: var(--ff-primary);
+  border: 2px solid var(--clr-white);
+  background-color: var(--clr-white);
+  letter-spacing: var(--spacing);
+  color: var(--clr-primary-5);
+  padding: 1.09rem 1.6rem;
+  font-size: 1.25rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.explore-btn:hover {
+  background-color: transparent;
+  color: var(--clr-white);
+  box-shadow: var(--light-shadow);
+}
+.nav-toggle {
+  color: var(--clr-primary-5);
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+.nav-toggle:hover {
+  transform: scale(1.2);
+}
+#social-links {
+  display: none;
+}
+#nav-links {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  header {
+    background: linear-gradient(rgb(44, 174, 186, 0.7), rgba(0, 0, 0, 0.7)),
+      url("./main.jpeg") center/cover no-repeat;
+  }
+}
+@media screen and (min-width: 992px) {
+  #nav-toggle {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+    letter-spacing: var(--spacing);
+  }
+  .nav-link {
+    margin-right: 0.75rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: var(--transition);
+  }
+  .nav-link:hover {
+    color: var(--clr-primary-5);
+  }
+  #nav-links {
+    display: flex;
+  }
+  #social-links {
+    display: flex;
+  }
+  .nav-link {
+    color: var(--clr-grey-1);
+  }
+  .nav-link {
+    margin-bottom: 0;
+  }
+  .nav-center {
+    margin: auto;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1170px;
+  }
+  .social-links {
+    color: var(--clr-primary-5);
+    font-size: 1.4rem;
+    transition: var(--transition);
+  }
+
+  .social-link {
+    cursor: pointer;
+    margin-right: 0.75rem;
+    color: var(--clr-primary-5);
+    transition: var(--transition);
+  }
+  .social-link:hover {
+    color: var(--clr-primary-8);
+  }
+  .explore-btn {
+    border: 3px solid var(--clr-white);
+  }
+}
+/* About Us */
+.about-us h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+.about-section {
+  margin: auto;
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+}
+#about-img-border {
+  border: none;
+}
+.about-title {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+}
+.about-text {
+  max-width: 40rem;
+}
+.section-center {
+  margin: auto;
+  width: 90vw;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+  .about-img {
+    width: 70%;
+    max-width: 35rem;
+    position: relative;
+  }
+  .about-title {
+    font-size: 1.7rem;
+  }
+  .about-info {
+    align-self: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #about-img-border {
+    border: 10px solid var(--clr-primary-5);
+    width: 560px;
+    height: 420.55px;
+    position: absolute;
+    top: -6%;
+    left: -5%;
+    z-index: -1;
+  }
+  .about-us h1 {
+    font-size: 2.5rem;
+  }
+}
+/* Service Section */
+.service-section {
+  background: var(--clr-grey-10);
+}
+.service {
+  text-align: center;
+}
+.our-services h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 5rem;
+  margin-bottom: 4rem;
+}
+.service p {
+  max-width: 18rem;
+  margin: auto;
+  padding-bottom: 4rem;
+}
+.service h4 {
+  margin-top: 1rem;
+}
+.service-icon {
+  font-size: 2rem;
+  color: var(--clr-primary-1);
+}
+.service-icons-b {
+  width: 3.5rem;
+  height: 4rem;
+  background-color: var(--clr-primary-5);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 650px) {
+  .services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .service {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .our-services h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .service p {
+    text-align: start;
+    padding: 0;
+    max-width: 17rem;
+  }
+  .service h4 {
+    text-align: start;
+  }
+  .service {
+    display: flex;
+    align-self: center;
+  }
+  .service-section {
+    padding-bottom: 6rem;
+  }
+  .service-icons-b {
+    margin-right: 1rem;
+    margin-bottom: 2.2rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .service p {
+    max-width: 20rem;
+  }
+}
+/* Tours Section */
+.tours-section {
+  padding: 0 1.25rem;
+  padding-bottom: 6rem;
+}
+.tours-section img {
+  height: 15rem;
+  object-fit: cover;
+  position: relative;
+}
+.featured-tours h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+}
+.tour {
+  background: var(--clr-grey-10);
+  margin-bottom: 2rem;
+  box-shadow: var(--light-shadow);
+  position: relative;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.days-left {
+  display: flex;
+  justify-content: space-between;
+}
+.tour h4 {
+  padding: 0 1.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 0.75rem;
+  margin: 0;
+}
+#days-left {
+  padding: 0 1.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 0.75rem;
+  color: var(--clr-grey-7);
+  margin: 0;
+}
+.tour p {
+  padding: 0 1.5rem;
+}
+.tours-info p {
+  padding: 0;
+  margin: 0;
+  color: var(--clr-primary-5);
+  margin-left: 0.25rem;
+}
+.tours-info {
+  color: var(--clr-primary-5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  padding-bottom: 1rem;
+}
+.tours-info-one {
+  justify-content: space-between;
+}
+.country {
+  display: flex;
+  align-items: center;
+}
+.tour-date {
+  position: absolute;
+  padding: 0.2rem 0.5rem;
+  bottom: calc(100% - 15rem);
+  right: 0;
+  display: block;
+  background: var(--clr-primary-8);
+}
+.tour-date p {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  color: var(--clr-grey-3);
+}
+.tours-btn {
+  margin: auto;
+  display: flex;
+}
+.tour:hover {
+  transform: scale(1.02);
+  box-shadow: var(--dark-shadow);
+}
+@media screen and (min-width: 600px) {
+  .tours-section {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .tours {
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+  }
+  .tour {
+    width: 44%;
+    margin: auto;
+    margin-bottom: 2rem;
+    gap: 5rem;
+  }
+  .tours-btn {
+    margin: 0;
+    align-self: flex-end;
+    margin: auto;
+    margin-top: 1rem;
+  }
+  .tour-two {
+    margin-top: 0;
+  }
+  .featured-tours h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .tour {
+    width: 30%;
+    max-width: 25rem;
+    margin: 0;
+  }
+  .tours {
+    justify-content: space-between;
+    max-width: 80rem;
+    margin: auto;
+  }
+  .tour-four {
+    margin: 0;
+    margin-top: 3rem;
+  }
+  .tour-three {
+    margin-top: 0;
+  }
+  .tours-btn {
+    margin-top: 1.5rem;
+  }
+}
