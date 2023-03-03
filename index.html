@@ -20,7 +20,7 @@
   </head>
   <body>
     <!-- Nav -->
-    <nav>
+    <nav class="navbar">
       <div class="nav-center">
         <svg
           width="175"
@@ -38,27 +38,30 @@
             fill="#3FD0D4"
           />
         </svg>
-        <i class="fas fa-bars nav-toggle" id="nav-toggle"></i>
-        <div class="nav-links" id="nav-links">
-          <p class="nav-link">Home</p>
-          <p class="nav-link">About</p>
-          <p class="nav-link">Services</p>
-          <p class="nav-link">Featured</p>
-          <p class="nav-link">Gallery</p>
-        </div>
-        <div class="social-links" id="social-links">
-          <a target="_blank" href="https://www.facebook.com/"
-            ><i class="fab fa-facebook social-link"></i></a
-          ><a target="_blank" href="https://twitter.com/?lang=en"
-            ><i class="fab fa-twitter social-link"></i></a
-          ><a target="_blank" href="https://www.squarespace.com/"
-            ><i class="fab fa-squarespace social-link"></i
-          ></a>
-        </div>
+        <i class="fas fa-bars" id="nav-toggle"></i>
       </div>
+      <div class="nav-links" id="nav-links">
+        <ul>
+          <li><a href="#home" class="scroll-link">Home</a></li>
+          <li><a href="#about" class="scroll-link">About</a></li>
+          <li><a href="#service" class="scroll-link">Services</a></li>
+          <li><a href="#tours" class="scroll-link">Featured</a></li>
+          <li><a href="#gallery" class="scroll-link">Gallery</a></li>
+          <div class="social-links">
+            <a target="_blank" href="https://www.facebook.com/"
+          ><i class="fab fa-facebook social-link"></i></a
+        ><a target="_blank" href="https://twitter.com/?lang=en"
+          ><i class="fab fa-twitter social-link"></i></a
+        ><a target="_blank" href="https://www.squarespace.com/"
+          ><i class="fab fa-squarespace social-link"></i
+        ></a>
+        </ul>
+        </div>
+    </div>
+        
     </nav>
     <!-- Header -->
-    <header>
+    <header id="home">
       <h1 class="header-title">continue exploring</h1>
       <p class="header-p">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto vel
@@ -67,7 +70,7 @@
       <button class="explore-btn">explore tours</button>
     </header>
     <!-- About Us -->
-    <section class="about-section" id="about-section">
+    <section class="about-section" id="about">
       <div class="about-us">
         <h1>About <span class="accent">Us</span></h1>
       </div>
@@ -93,7 +96,7 @@
       </div>
     </section>
     <!-- Service Section -->
-    <section class="service-section">
+    <section class="service-section" id="service">
       <div class="our-services">
         <h1>Our <span class="accent">Services</span></h1>
       </div>
@@ -137,7 +140,7 @@
       </div>
     </section>
     <!-- Tours Section -->
-    <section class="tours-section" id="tours-section">
+    <section class="tours-section" id="tours">
       <div class="featured-tours">
         <h1>featured <span class="accent">tours</span></h1>
       </div>
@@ -231,6 +234,80 @@
         </form>
       </div>
     </section>
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+      <article class="foto-one pictures">
+        <img class="foto" src="./tour-1.jpeg" />
+        <a href="#" class="gallery-icon">
+          <i class="fas fa-search"></i>
+        </a>
+      </article>
+      <article class="foto-two pictures">
+        <img class="foto" src="./tour-2.jpeg" />
+        <a href="#" class="gallery-icon">
+          <i class="fas fa-search"></i>
+        </a>
+      </article>
+      <article class="foto-three pictures">
+        <img class="foto" src="./tour-3.jpeg" />
+        <a href="#" class="gallery-icon">
+          <i class="fas fa-search"></i>
+        </a>
+      </article>
+      <article class="foto-four pictures">
+        <img class="foto" src="./tour-4.jpeg" />
+        <a href="#" class="gallery-icon">
+          <i class="fas fa-search"></i>
+        </a>
+      </article>
+      <article class="foto-five pictures">
+        <img class="foto" src="./tour-5.jpeg" />
+        <a href="#" class="gallery-icon">
+          <i class="fas fa-search"></i>
+        </a>
+      </article>
+      <article class="foto-six pictures">
+        <img class="foto" src="./tour-6.jpeg" />
+        <a href="#" class="gallery-icon">
+          <i class="fas fa-search"></i>
+        </a>
+      </article>
+      <article class="foto-seven pictures">
+        <img class="foto" src="./tour-1.jpeg" />
+        <a href="#" class="gallery-icon">
+          <i class="fas fa-search"></i>
+        </a>
+      </article>
+      <article class="foto-eight pictures">
+        <img class="foto" src="./tour-2.jpeg" />
+        <a href="#" class="gallery-icon">
+          <i class="fas fa-search"></i>
+        </a>
+      </article>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-links scroll-links">
+        <a href="#home" class="footer-link scroll-link">Home</a>
+        <a href="#about" class="footer-link scroll-link">About</a>
+        <a href="#service" class="footer-link scroll-link">Services</a>
+        <a href="#tours" class="footer-link scroll-link">Featured</a>
+        <a href="#gallery" class="footer-link scroll-link">Gallery</a>
+      </div>
+      <div class="footer-social-links">
+        <a target="_blank" href="https://www.facebook.com/"
+          ><i class="fab fa-facebook footer-social-link"></i></a
+        ><a target="_blank" href="https://twitter.com/?lang=en"
+          ><i class="fab fa-twitter footer-social-link"></i></a
+        ><a target="_blank" href="https://www.squarespace.com/"
+          ><i class="fab fa-squarespace footer-social-link"></i
+        ></a>
+      </div>
+      <p class="copy-right">
+        Copyright &copy; Backroads Travel Tour Company
+        <span id="date"></span>. All Rights Reserved
+      </p>
+    </footer>
     <script src="./app.js"></script>
   </body>
 </html>
